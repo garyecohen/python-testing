@@ -1,0 +1,6 @@
+x = 2 + 7
+
+if x > 6:
+    print('more than 4')
+else:
+    print('not')
