@@ -1,0 +1,8 @@
+llm_text = '''
+{
+  "foods": [
+    {"name": "apple", "calories": 92},
+    {"name": "pizza"},    
+    {"name": "banana", "calories": 102}
+}
+'''
