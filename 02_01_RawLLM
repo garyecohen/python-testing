@@ -6,3 +6,12 @@ llm_text = '''
     {"name": "banana", "calories": 102}
 }
 '''
+
+import json
+try:
+llm_output = json.loads(llm_text)
+except json.JSONDecodeError:
+raise ValueError ("LLM output is not valid JSON")
+
+if "foods" not in llm_output:
+raise ValueError("Missing required key: foods")
