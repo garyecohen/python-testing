@@ -2,16 +2,17 @@ llm_text = '''
 {
   "foods": [
     {"name": "apple", "calories": 92},
-    {"name": "pizza"},    
+    {"name": "pizza", "calories": 944},    
     {"name": "banana", "calories": 102}
+    ]
 }
 '''
 
 import json
 try:
-llm_output = json.loads(llm_text)
+  llm_output = json.loads(llm_text)
 except json.JSONDecodeError:
-raise ValueError ("LLM output is not valid JSON")
+  raise ValueError ("LLM output is not valid JSON")
 
 if "foods" not in llm_output:
-raise ValueError("Missing required key: foods")
+  raise ValueError("Missing required key: foods")
